@@ -372,7 +372,7 @@ export default function Home(styles) {
                       C. Benito Juárez SN, Centro, 40000 Iguala de la Independencia, Gro.
                     </span>
                   </p>
-                  <a target={'_blank'} href="https://goo.gl/maps/BAW3HrC3ZFzYEqaF6">Ver mapa</a>
+                  <a target={'_blank'} rel="noreferrer" href="https://goo.gl/maps/BAW3HrC3ZFzYEqaF6">Ver mapa</a>
                 </div>
 
                 <div data-aos="fade-left" className="civil">
@@ -398,7 +398,7 @@ export default function Home(styles) {
                       Priv. de Chabacano LB, Juan N. Alvarez, 40020 Iguala de la Independencia, Gro.
                     </span>
                   </p>
-                  <a target={'_blank'} href="https://goo.gl/maps/XgrxcnsebgsXVmAS9">Ver mapa</a>
+                  <a target={'_blank'} rel="noreferrer" href="https://goo.gl/maps/XgrxcnsebgsXVmAS9">Ver mapa</a>
                 </div>
 
               </section>
