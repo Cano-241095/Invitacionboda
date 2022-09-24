@@ -8,7 +8,7 @@ import rosaR from "../public/rosaRosa2.png"
 import dynamic from 'next/dynamic'
 
 
-export default function Home(styles) {
+export default function Home(AOS) {
   const [sobreCerrado, setsobreCerrado] = useState(true)
   const [sobreP, setSobreP] = useState(false)
   const [playM, setPlay] = useState(true)
@@ -249,7 +249,14 @@ const [pathname, setPathname] = useState('')
     //     console.log('esto es el mapeo: ' + index.codigo)
     //   ))
     // ) : null
+    
+  AOS.init({
+    duration: 1000
+  });
+
   },[])
+
+
   return (
 
     <div className="App">
@@ -319,7 +326,7 @@ const [pathname, setPathname] = useState('')
                   <br />
                 </div>
                 <div className='adorno'>
-                  <Image src={rosaCentral}
+                  <Image src={adornoVerdeArriba}
                     layout="responsive" />
                 </div>
               </section>

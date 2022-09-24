@@ -299,6 +299,8 @@ main {
   margin: 0;
   width: 100vw;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .invitado {
@@ -315,6 +317,11 @@ main {
   align-items: center;
   box-sizing: border-box;
 
+  @media (min-width: 768px) {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   p {
     width: 100%;
     margin: 0;
@@ -345,10 +352,18 @@ main {
   width: 50%;
   margin: .5rem auto;
   // filter: drop-shadow(0 0 3px rgba(170, 255, 185, 0.5));
+    @media (min-width: 768px) {
+      width: 20%;
+      margin: 1rem auto;
+    }
 }
 .adornoPrimary {
   width: 65%;
   margin: .5rem auto;
+  @media (min-width: 768px) {
+    width: 25%;
+    margin: 1rem auto;
+  }
   // filter: drop-shadow(0 0 3px rgba(170, 255, 185, 0.5));
 }
 
@@ -366,6 +381,11 @@ section.faltan {
   text-align: center;
   position: relative;
 
+  @media (min-width: 768px) {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   p {
     color: white;
     margin: 0 .5rem;
@@ -429,6 +449,11 @@ section.faltan {
 
 .lugar {
   margin-top: 7rem;
+  @media (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 
   p {
     display: flex;
