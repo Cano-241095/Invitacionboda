@@ -13,7 +13,8 @@ export default function Home(styles) {
   const [sobreP, setSobreP] = useState(false)
   const [playM, setPlay] = useState(true)
   const [permiso, setPermiso] = useState(false)
-  const pathname = '?012canbah'
+  // const pathname = '?012canbah'
+const [pathname, setPathname] = useState('')
   const [DateCountdown, setDateCountdown] = useState()
   const [invitado, setInvitado] = useState({
     familia: '',
@@ -228,15 +229,26 @@ export default function Home(styles) {
   useEffect(() => {
 
     setDateCountdown(dynamic(() => import('react-date-countdown-timer'), {}))
-    invitado.codigo !== pathname.slice(1, pathname.length) ? (
+    // setPathname(dynamic(() => 
+    invitado.codigo !== window.location.search.slice(1, window.location.search.length) ? (
       invitados.map((index) => (
-        pathname.slice(1, pathname.length) === index.codigo ? (
+        window.location.search.slice(1, window.location.search.length) === index.codigo ? (
           setInvitado(index),
           setPermiso(true)
         ) : (null),
         console.log('esto es el mapeo: ' + index.codigo)
       ))
     ) : null
+    //  {}))
+    // invitado.codigo !== pathname.slice(1, pathname.length) ? (
+    //   invitados.map((index) => (
+    //     pathname.slice(1, pathname.length) === index.codigo ? (
+    //       setInvitado(index),
+    //       setPermiso(true)
+    //     ) : (null),
+    //     console.log('esto es el mapeo: ' + index.codigo)
+    //   ))
+    // ) : null
   },[])
   return (
 
