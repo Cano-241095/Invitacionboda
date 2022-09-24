@@ -38,7 +38,7 @@ $azulRey: rgb(62 63 160);
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url('../public/ejemplo.jpg');
+  background-image: url('../public/cdZologicoFuera.jpeg');
   background-size: cover;
   background-position: center;
   align-items: center;
@@ -206,7 +206,7 @@ $azulRey: rgb(62 63 160);
 .header {
   width: 100%;
   height: 95vh;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -215,10 +215,10 @@ $azulRey: rgb(62 63 160);
   align-items: center;
   text-align: center;
   position: relative;
-  background-image: linear-gradient(transparent, transparent, $primary),
-    linear-gradient(transparent, transparent, transparent, $primary),
+  background-image: linear-gradient($primary, transparent, transparent, $primary),
     linear-gradient(transparent, transparent, transparent, transparent, $primary),
-    url('../public/ejemplo.jpg');
+    linear-gradient(transparent, transparent,  transparent,transparent, transparent, $primary),
+    url('../public/cdZologicoFuera.jpeg');
 
   & h1 {
     font-family: 'Dancing Script', cursive;

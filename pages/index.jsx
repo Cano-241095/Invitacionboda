@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 import Image from 'next/image'
 import rosaCentral from '../public/rosaCentro.png'
 import adornoVerdeArriba from "../public/adornoVerdeArriba.png"
@@ -261,6 +262,11 @@ const [pathname, setPathname] = useState('')
 
     <div className="App">
 
+<Head>
+        <title>¡Nos casamos!</title>
+        <meta name="description" content="Invitacion Diana & Cano" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {permiso ? (
         sobreCerrado ? (
           <div className='hero'>
