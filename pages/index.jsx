@@ -265,7 +265,7 @@ const [pathname, setPathname] = useState('')
 <Head>
         <title>¡Nos casamos!</title>
         <meta name="description" content="Invitacion Diana & Cano" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/cdPuentemini.ico" />
       </Head>
       {permiso ? (
         sobreCerrado ? (
