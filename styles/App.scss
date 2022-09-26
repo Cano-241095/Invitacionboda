@@ -3,6 +3,7 @@
 $primary: rgb(37, 40, 52);
 $rojo: rgb(255, 0, 0);
 $azulRey: rgb(62 63 160);
+$fotoFondo: url('../public/propuesta.jpeg');
 
 #id {
   width: 100vw;
@@ -38,7 +39,7 @@ $azulRey: rgb(62 63 160);
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url('../public/cdZologicoFuera.jpeg');
+  background-image: $fotoFondo;
   background-size: cover;
   background-position: center;
   align-items: center;
@@ -206,7 +207,7 @@ $azulRey: rgb(62 63 160);
 .header {
   width: 100%;
   height: 95vh;
-  background-position: center bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -215,21 +216,31 @@ $azulRey: rgb(62 63 160);
   align-items: center;
   text-align: center;
   position: relative;
-  background-image: linear-gradient($primary, transparent, transparent, $primary),
-    linear-gradient(transparent, transparent, transparent, transparent, $primary),
-    linear-gradient(transparent, transparent,  transparent,transparent, transparent, $primary),
-    url('../public/cdZologicoFuera.jpeg');
+  background-image: linear-gradient($primary, transparent, transparent, transparent, transparent, $primary),
+    linear-gradient(transparent, transparent, transparent, transparent, transparent ,transparent, $primary),
+    linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
+    $fotoFondo;
 
+    @media (min-width: 768px) {
+      background-position: center;
+      height: 100vh;
+    }
   & h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 4rem;
     margin: 0;
     padding: 0;
     color: white;
-    display: block;
     width: 100%;
     font-weight: 300;
     text-shadow: 0 0 10px black;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (min-width: 768px) {
+      width: 70%;
+    }
   }
 
   & h2 {
@@ -287,9 +298,10 @@ $azulRey: rgb(62 63 160);
   // animation: color-change .7s infinite;
   // animation-direction: alternate;
   margin: 0 1rem;
+  width: 1rem!important;
   animation-delay: 0;
   color: rgb(255, 0, 0);
-  width: 50% !important;
+  font-size: 2rem;
   box-shadow: none;
   font-family: 'Ms Madi', cursive;
 }

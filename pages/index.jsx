@@ -252,7 +252,7 @@ const [pathname, setPathname] = useState('')
     // ) : null
     
   AOS.init({
-    duration: 1000
+    duration: 950
   });
 
   },[])
