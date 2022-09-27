@@ -252,7 +252,7 @@ export default function Home(AOS) {
         window.location.search.slice(1, window.location.search.length) === index.codigo ? (
           setInvitado(index),
           setPermiso(true),
-          templateParams.name = index.familia,
+          templateParams.name = index.familia
         ) : (null),
         console.log('esto es el mapeo: ' + index.codigo)
       ))
