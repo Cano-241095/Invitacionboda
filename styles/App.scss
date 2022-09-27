@@ -228,7 +228,7 @@ $fotoFondo: url('../public/propuesta.jpeg');
     }
   & h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 4rem;
+    font-size: 3.9rem;
     margin: 0;
     padding: 0;
     color: white;
@@ -237,7 +237,7 @@ $fotoFondo: url('../public/propuesta.jpeg');
     text-shadow: 0 0 10px black;
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     @media (min-width: 768px) {
       width: 70%;
@@ -247,7 +247,7 @@ $fotoFondo: url('../public/propuesta.jpeg');
   & h2 {
     font-family: 'Ms Madi', cursive;
     font-size: 4rem;
-    margin: 5rem 0;
+    margin: 5rem auto 2.5rem 0;
     padding: 0;
     color: white;
     display: block;
@@ -256,7 +256,7 @@ $fotoFondo: url('../public/propuesta.jpeg');
   }
   & button {
     position: fixed;
-    top: 40%;
+    top: 50%;
     right: 0;
     cursor: pointer;
     background-image: linear-gradient(-45deg, $primary, $azulRey, $primary);
@@ -298,8 +298,11 @@ $fotoFondo: url('../public/propuesta.jpeg');
   // -ms-animation: color-change .7s infinite;
   // animation: color-change .7s infinite;
   // animation-direction: alternate;
+  display: flex;
+  align-items: center;
+  height: 70%;
+  justify-content: center;
   margin: 0;
-  width: 1rem!important;
   animation-delay: 0;
   color: rgb(255, 0, 0);
   font-size: 2rem;

@@ -7,6 +7,7 @@ import adornoVerdeArriba from "../public/adornoVerdeArriba.png"
 import rosaL from "../public/rosaRosa.png"
 import rosaR from "../public/rosaRosa2.png"
 import dynamic from 'next/dynamic'
+import emailjs from 'emailjs-com'
 
 
 export default function Home(AOS) {
@@ -15,7 +16,7 @@ export default function Home(AOS) {
   const [playM, setPlay] = useState(true)
   const [permiso, setPermiso] = useState(false)
   // const pathname = '?012canbah'
-const [pathname, setPathname] = useState('')
+  const [pathname, setPathname] = useState('')
   const [DateCountdown, setDateCountdown] = useState()
   const [invitado, setInvitado] = useState({
     familia: '',
@@ -24,12 +25,27 @@ const [pathname, setPathname] = useState('')
     tipo: '',
     novio: ''
   })
-  
+  const [templateParams, setTemplateParams] = useState({ name: 'prueba nombre', mensaje: 'si pueden ir 4' })
+
   function cambio() {
     setSobreP(true)
     setTimeout(function () {
       setsobreCerrado(false)
     }, 200);
+  }
+  (function () {
+    emailjs.init("IQRXUPESvM0tL-ScM");
+  })();
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    emailjs.send('default_service', 'template_alg4w0r', templateParams)
+      .then((response) => {
+        console.log(response.status, response.text);
+      }, (err) => {
+        console.log(err);
+      });
   }
 
   const invitados = [{
@@ -235,12 +251,13 @@ const [pathname, setPathname] = useState('')
       invitados.map((index) => (
         window.location.search.slice(1, window.location.search.length) === index.codigo ? (
           setInvitado(index),
-          setPermiso(true)
+          setPermiso(true),
+          templateParams.name = index.familia,
         ) : (null),
         console.log('esto es el mapeo: ' + index.codigo)
       ))
     ) : null
-    //  {}))
+    //  { }))
     // invitado.codigo !== pathname.slice(1, pathname.length) ? (
     //   invitados.map((index) => (
     //     pathname.slice(1, pathname.length) === index.codigo ? (
@@ -250,20 +267,21 @@ const [pathname, setPathname] = useState('')
     //     console.log('esto es el mapeo: ' + index.codigo)
     //   ))
     // ) : null
-    
-  AOS.init({
-    duration: 950
-  });
 
-  },[])
+    AOS.init({
+      duration: 900
+    });
+
+  }, [])
 
 
   return (
 
     <div className="App">
 
-<Head>
+      <Head>
         <title>¡Nos casamos!</title>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
         <meta name="description" content="Invitacion Diana & Cano" />
         <link rel="icon" href="/cdPuentemini.ico" />
       </Head>
@@ -285,7 +303,9 @@ const [pathname, setPathname] = useState('')
               <h1>Diana
                 <span className='animationPink'>
                   {/* {rosaCentral} */}
-                  &
+                  <svg width="26" height="26" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015Zm6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343ZM7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358Z" />
+                  </svg>
                 </span>{invitado.novio ? ('Ezequiel') : ('Cano')}</h1>
               {playM ? (
                 <audio src="/saborAmi.mp3" autoPlay loop> </audio>
@@ -346,11 +366,11 @@ const [pathname, setPathname] = useState('')
                   <>
                     <br />
                     <br />
-                    <p>Pases para <span>{invitado.invitados}</span> personas</p>
-                <div className='adorno'>
-                  <Image src={adornoVerdeArriba}
-                    layout="responsive" />
-                </div>
+                    <p>Pase para <span>{invitado.invitados}</span> personas</p>
+                    <div className='adorno'>
+                      <Image src={adornoVerdeArriba}
+                        layout="responsive" />
+                    </div>
                     <br />
                     <br />
                     <p>¡Los esperamos!</p>
@@ -373,7 +393,7 @@ const [pathname, setPathname] = useState('')
                 </div>
               </section>
               <section data-aos="fade-right" className='lugar'>
-                <p><Image src={rosaL} width={40} height={35}/> ¿Donde y Cuando?<Image src={rosaR} width={40} height={35}/></p>
+                <p><Image src={rosaL} width={40} height={35} /> ¿Donde y Cuando?<Image src={rosaR} width={40} height={35} /></p>
                 <div className="civil">
                   <h2>Ceremonia Civil</h2>
                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1893.5246638947324!2d-99.5411485!3d18.3450339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cc387482eade43%3A0xadc8e1a604704451!2sMuseo%20de%20la%20Bandera%20y%20Santuario%20de%20la%20Patria!5e0!3m2!1ses-419!2smx!4v1663900269184!5m2!1ses-419!2smx" allowfullscreen=""></iframe>
@@ -425,6 +445,14 @@ const [pathname, setPathname] = useState('')
                   </p>
                   <a target={'_blank'} rel="noreferrer" href="https://goo.gl/maps/XgrxcnsebgsXVmAS9">Ver mapa</a>
                 </div>
+
+              </section>
+              <section className='confirmacion'>
+                <form action="">
+                  confirmacion
+                  <input type="number" required maxLength={invitado.invitados}/>
+                  <button onClick={(e) =>  handleSubmit(e)}>enviar</button>
+                </form>
 
               </section>
             </main>
