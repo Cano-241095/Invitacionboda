@@ -3,7 +3,7 @@
 $primary: rgb(37, 40, 52);
 $rojo: rgb(255, 0, 0);
 $azulRey: rgb(62 63 160);
-$fotoFondo: url('../public/propuesta.jpeg');
+$fotoFondo: url('../public/cd.gif');
 
 #id {
   width: 100vw;
@@ -217,12 +217,23 @@ $fotoFondo: url('../public/propuesta.jpeg');
   align-items: center;
   text-align: center;
   position: relative;
-  background-image: linear-gradient($primary, transparent, transparent, transparent, transparent, $primary),
-    linear-gradient(transparent, transparent, transparent, transparent, transparent ,transparent, $primary),
-    linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
-    $fotoFondo;
+  // background-image: linear-gradient($primary, transparent, transparent, transparent, transparent, $primary),
+  //   linear-gradient(transparent, transparent, transparent, transparent, transparent ,transparent, $primary),
+  //   linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
+  //   $fotoFondo;
 
+    background-image: radial-gradient(transparent, transparent, $primary),
+    linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
+    linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
+    linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
+    linear-gradient( rgba(132, 0, 255, 0.181),transparent, rgba(0, 255, 234, 0.298)),
+    radial-gradient(transparent, rgba(0, 128, 83, 0.4)),
+    $fotoFondo;
     @media (min-width: 768px) {
+      background-image: linear-gradient($primary, transparent, transparent, transparent, transparent, $primary),
+        linear-gradient(transparent, transparent, transparent, transparent, transparent ,transparent, $primary),
+        linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
+        $fotoFondo;
       background-position: center;
       height: 100vh;
     }
