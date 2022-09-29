@@ -25,7 +25,7 @@ export default function Home(AOS) {
     tipo: '',
     novio: ''
   })
-  const [templateParams, setTemplateParams] = useState({ name: 'prueba nombre', mensaje: 'si pueden ir 4' })
+  const [templateParams, setTemplateParams] = useState({ name: '', mensaje: 'si pueden ir 4' })
 
   function cambio() {
     setSobreP(true)
@@ -42,7 +42,7 @@ export default function Home(AOS) {
 
     emailjs.send('default_service', 'template_alg4w0r', templateParams)
       .then((response) => {
-        console.log(response.status, response.text);
+        window.open('https://calendar.google.com/calendar/u/0/r/eventedit?text=Boda+Diana+y+Cano&dates=20221224T150000/20221224T190000&details=Hora+de+servicio+de+comida+3:30pm+a+6:00pm.&location=Priv.+de+Chabacano+LB,+Juan+N.+Alvarez,+40020+Iguala+de+la+Independencia,+Gro.', '_blank');
       }, (err) => {
         console.log(err);
       });
@@ -256,17 +256,7 @@ export default function Home(AOS) {
         ) : (null),
         console.log('esto es el mapeo: ' + index.codigo)
       ))
-    ) : null
-    //  { }))
-    // invitado.codigo !== pathname.slice(1, pathname.length) ? (
-    //   invitados.map((index) => (
-    //     pathname.slice(1, pathname.length) === index.codigo ? (
-    //       setInvitado(index),
-    //       setPermiso(true)
-    //     ) : (null),
-    //     console.log('esto es el mapeo: ' + index.codigo)
-    //   ))
-    // ) : null
+    ) : null;
 
     AOS.init({
       duration: 900
@@ -278,7 +268,6 @@ export default function Home(AOS) {
   return (
 
     <div className="App">
-
       <Head>
         <title>¡Nos casamos!</title>
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
@@ -378,7 +367,6 @@ export default function Home(AOS) {
                   </>
                 ) : null}
               </section>
-
               <section className='faltan'>
                 <p>Dias faltantes</p>
                 <div className="fecha">
@@ -449,11 +437,12 @@ export default function Home(AOS) {
               </section>
               <section className='confirmacion'>
                 <form action="">
-                  confirmacion
-                  <input type="number" required maxLength={invitado.invitados}/>
-                  <button onClick={(e) =>  handleSubmit(e)}>enviar</button>
+                  <p>Favor de confirmar asistencia antes del 1 de Diciembre</p>
+                  <button onClick={(e) => handleSubmit(e)}>Confirmar Asistencia</button>
                 </form>
-
+                {/* <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Boda+Diana+y+Cano&dates=20221224T150000/20221224T190000&details=Hora+de+servicio+de+comida+3:30pm+a+6:00pm.&location=Priv.+de+Chabacano+LB,+Juan+N.+Alvarez,+40020+Iguala+de+la+Independencia,+Gro." target="_blank">
+                  google
+                </a> */}
               </section>
             </main>
           </>

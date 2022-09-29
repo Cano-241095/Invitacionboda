@@ -3,7 +3,8 @@
 $primary: rgb(37, 40, 52);
 $rojo: rgb(255, 0, 0);
 $azulRey: rgb(62 63 160);
-$fotoFondo: url('../public/cd.gif');
+$fotoFondo: url('../public/parejaBosque.jpg');
+$white: #ffffff;
 
 #id {
   width: 100vw;
@@ -222,11 +223,12 @@ $fotoFondo: url('../public/cd.gif');
   //   linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
   //   $fotoFondo;
 
-    background-image: radial-gradient(transparent, transparent, $primary),
+    background-image: 
     linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
     linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
+    radial-gradient(transparent, transparent, black),
     linear-gradient(transparent, transparent,  transparent, transparent, transparent, transparent, $primary),
-    linear-gradient( rgba(132, 0, 255, 0.181),transparent, rgba(0, 255, 234, 0.298)),
+    linear-gradient( rgba(132, 0, 255, 0.181),transparent, $primary),
     radial-gradient(transparent, rgba(0, 128, 83, 0.4)),
     $fotoFondo;
     @media (min-width: 768px) {
@@ -242,7 +244,7 @@ $fotoFondo: url('../public/cd.gif');
     font-size: 3.9rem;
     margin: 0;
     padding: 0;
-    color: white;
+    color:$white;
     width: 100%;
     font-weight: 300;
     text-shadow: 0 0 10px black;
@@ -260,7 +262,7 @@ $fotoFondo: url('../public/cd.gif');
     font-size: 4rem;
     margin: 5rem auto 2.5rem 0;
     padding: 0;
-    color: white;
+    color:$white;
     display: block;
     width: 100%;
     text-shadow: 0 0 10px black;
@@ -289,7 +291,7 @@ $fotoFondo: url('../public/cd.gif');
     bottom: 0;
 
     p {
-      color: white;
+      color:$white;
       font-size: 2rem;
       text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
       margin: 0;
@@ -340,7 +342,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
+  color:$white;
   align-items: center;
   box-sizing: border-box;
 
@@ -414,7 +416,7 @@ section.faltan {
     margin-right: auto;
   }
   p {
-    color: white;
+    color:$white;
     margin: 0 .5rem;
   }
 
@@ -454,7 +456,7 @@ section.faltan {
   }
 
   .fechaTxt {
-    color: white;
+    color:$white;
     text-shadow: 0 0 10px black;
     display: flex;
     width: 100%;
@@ -539,13 +541,15 @@ section.faltan {
     margin-top: 1rem;
     font-size: 1.1rem;
     font-family: 'Raleway', sans-serif;
-    background-image: linear-gradient(45deg, $primary, $azulRey, $primary);
-    color: #ffffff;
+    // background-image: linear-gradient(45deg, $primary, $azulRey, $primary);
+    background-color: transparent;
+    color: $primary;
     text-decoration: none;
     padding: .5rem;
-    border-radius: 7px;
+    border-radius: 50px;
+    border: solid 1px $primary;
     &:visited{
-      color: #ffffff;
+      color: $primary;
     }
   }
 }
@@ -594,16 +598,20 @@ section.faltan {
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+section.confirmacion{
+  padding: 1rem;
+  p{
+    margin: 0;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  button,a{
+    width: 100%;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 2rem;
+    border: none;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #ffffff;
+    border: solid 1px #ffffff;
+  }
 }
