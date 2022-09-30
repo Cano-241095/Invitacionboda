@@ -253,8 +253,7 @@ export default function Home(AOS) {
           setInvitado(index),
           setPermiso(true),
           templateParams.name = index.familia
-        ) : (null),
-        console.log('esto es el mapeo: ' + index.codigo)
+        ) : (null)
       ))
     ) : null;
 
@@ -297,7 +296,7 @@ export default function Home(AOS) {
                   </svg>
                 </span>{invitado.novio ? ('Ezequiel') : ('Cano')}</h1>
               {playM ? (
-                <audio src="/saborAmi.mp3" autoPlay loop> </audio>
+                <audio src="/saborAmiMini.mp3" autoPlay loop> </audio>
               ) : (
                 null
               )}
