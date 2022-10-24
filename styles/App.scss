@@ -3,6 +3,7 @@
 $primary: rgb(37, 40, 52);
 $rojo: rgb(255, 0, 0);
 $azulRey: rgb(62 63 160);
+$azulReyT: rgba(62, 64, 160, 0.7);
 $fotoFondo: url('../public/parejaBosque.jpg');
 $fotoFondoMediano: url('../public/parejaBosqueMediano.jpg');
 $white: #ffffff;
@@ -334,10 +335,76 @@ main {
 }
 
 .invitado {
-  margin-top: 1rem;
+  margin-top: 5rem;
+  border-radius: 1rem;
   min-height: 50vh;
-  width: 100vw;
-  padding: 1rem;
+  width: 90vw;
+  // box-shadow: 0 0 1rem $white;
+  margin-left: auto;
+  margin-right: auto;
+  // border: solid 1px $white;
+  padding: 0;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color:$primary;
+  align-items: center;
+  background-color: $white;
+  box-sizing: border-box;
+
+  h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0 .5rem;
+  }
+  @media (min-width: 768px) {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    box-sizing: border-box;
+    &.mama{
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+      span {
+        color: rgb(213, 98, 98);
+        text-shadow: 0 0 1rem rgb(213, 98, 98);
+      }
+    }
+    &.papa{
+      text-shadow: 0 0 5px rgba(0, 0, 0, .6);
+      span{
+        color: rgb(88, 203, 153);
+        text-shadow: 0 0 1rem rgb(88, 203, 153);
+      }
+    }
+  }
+  .padres {
+    p{
+      letter-spacing: 2px;
+      font-family: 'Dancing Script', cursive;
+    }
+  }
+}
+.invitados {
+  // box-shadow: 0 0 1rem $white;
+  border-radius: 1rem;
+  min-height: 37vh;
+  width: 90vw;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  // border: solid 1px $white;
+  // background-color: $white;
+  padding: 0rem;
   text-align: center;
   font-family: 'Courgette', cursive;
   display: flex;
@@ -356,7 +423,7 @@ main {
     width: 100%;
     margin: 0;
     padding: 0 1rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1;
     box-sizing: border-box;
 
@@ -364,11 +431,6 @@ main {
       color: $rojo;
       font-size: 2.5rem;
     }
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin: 0;
   }
   .padres {
     p{
@@ -398,12 +460,17 @@ main {
 }
 
 section.faltan {
-  width: 100%;
-  margin-top: 4rem;
+  // box-shadow: 0 0 1rem $white;
+  border-radius: 1rem;
+  width: 90vw;
+  padding: 1rem .5rem;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+background-color: $white;
+color: $primary;
+  // border: solid 1px $white;
   // min-height: 28vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -417,14 +484,14 @@ section.faltan {
     margin-right: auto;
   }
   p {
-    color:$white;
+    color:$primary;
     margin: 0 .5rem;
   }
 
   .fecha {
     width: 100%;
     // position: absolute;
-    bottom: 3rem;
+    // bottom: 3rem;
     font-size: 1.5rem;
     font-family: 'Dancing Script', cursive;
 
@@ -441,7 +508,7 @@ section.faltan {
     margin-top: 2rem;
     font-size: 1.5rem;
     color: $rojo;
-    text-shadow: 0 0 10px black;
+    text-shadow: 0 0 10px rgb(223, 118, 118);
 
     & span {
       width: 20%;
@@ -457,8 +524,8 @@ section.faltan {
   }
 
   .fechaTxt {
-    color:$white;
-    text-shadow: 0 0 10px black;
+    color:$primary;
+    // text-shadow: 0 0 10px black;
     display: flex;
     width: 100%;
     margin: 0 auto;
@@ -478,7 +545,7 @@ section.faltan {
 }
 
 .lugar {
-  margin-top: 7rem;
+  margin-top: 2rem;
   @media (min-width: 768px) {
     margin-left: auto;
     margin-right: auto;
@@ -503,18 +570,22 @@ section.faltan {
   background-color: #ffffff;
   padding: .5rem;
   box-sizing: border-box;
-  border-radius: 7px;
+  border-radius: 1rem;
   color: $primary;
   display: flex;
   flex-direction: column;
   align-items: center;
+ h2{
+  margin: 1rem 0;
+  font-size: 2.2rem;
+ }
 
   iframe {
     width: 95%;
     min-height: 30vh;
     border: none;
     border-radius: 7px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.342);
   }
 
   p {
@@ -529,6 +600,9 @@ section.faltan {
 
     svg {
       width: 10%;
+      path{
+        fill: #09c35a;
+      }
     }
 
     span {
@@ -543,14 +617,14 @@ section.faltan {
     font-size: 1.1rem;
     font-family: 'Raleway', sans-serif;
     // background-image: linear-gradient(45deg, $primary, $azulRey, $primary);
-    background-color: transparent;
-    color: $primary;
+    background-color: $azulRey;
+    box-shadow: 0 0 2rem $azulReyT;
+    color: $white;
     text-decoration: none;
     padding: .5rem;
     border-radius: 50px;
-    border: solid 1px $primary;
     &:visited{
-      color: $primary;
+      color: $white;
     }
   }
 }
