@@ -5,7 +5,8 @@ $rojo: rgb(255, 0, 0);
 $azulRey: rgb(62 63 160);
 $azulReyT: rgba(62, 64, 160, 0.7);
 $fotoFondo: url('../public/parejaBosque.jpg');
-$fotoFondoMediano: url('../public/parejaBosqueMediano.jpg');
+$fotoFondoMediano: url('../public/parejaBosqueMedianoMin.jpg');
+$fotoFondoMini: url('../public/parejaBosqueMin.jpg');
 $white: #ffffff;
 
 #id {
@@ -42,7 +43,7 @@ $white: #ffffff;
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: $fotoFondo;
+  background-image: $fotoFondoMini;
   background-size: cover;
   background-position: center;
   align-items: center;
