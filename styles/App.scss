@@ -26,6 +26,10 @@ $white: #ffffff;
   font-size: 2rem;
   text-align: center;
   scroll-behavior: smooth;
+  background-image: url(../public/textura.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 1400px;
 }
 
 .clearfix::after {
@@ -312,22 +316,15 @@ $white: #ffffff;
 }
 
 .animationPink {
-  // -webkit-animation: color-change .7s infinite;
-  // -moz-animation: color-change .7s infinite;
-  // -o-animation: color-change .7s infinite;
-  // -ms-animation: color-change .7s infinite;
-  // animation: color-change .7s infinite;
-  // animation-direction: alternate;
   display: flex;
   align-items: center;
-  height: 70%;
   justify-content: center;
-  margin: 0;
-  animation-delay: 0;
+  align-items: center;
+  font-weight: 600;
   color: rgb(255, 0, 0);
   font-size: 2rem;
-  box-shadow: none;
   font-family: 'Ms Madi', cursive;
+  margin: 0 .5rem;
 }
 
 .transtision {
@@ -343,7 +340,7 @@ main {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient($primary, transparent), url(../public/textura.jpg);
+  background-image: linear-gradient($primary, transparent);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
