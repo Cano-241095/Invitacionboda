@@ -8,13 +8,20 @@ import rosaL from "../public/rosaRosa.png"
 import rosaR from "../public/rosaRosa2.png"
 import dynamic from 'next/dynamic'
 import emailjs from 'emailjs-com'
-
+import f01 from '../public/001.jpg';
+import f02 from '../public/013.jpg';
+import f03 from '../public/009.jpg';
+import f04 from '../public/006.jpg';
+import f05 from '../public/010.jpeg';
+import f06 from '../public/004.jpeg';
 
 export default function Home(AOS) {
   const [sobreCerrado, setsobreCerrado] = useState(true)
   const [sobreP, setSobreP] = useState(false)
   const [playM, setPlay] = useState(true)
   const [permiso, setPermiso] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [fotoElegida, setFotoElegida] = useState('')
   // const pathname = '?012canbah'
   const [pathname, setPathname] = useState('')
   const [DateCountdown, setDateCountdown] = useState()
@@ -439,48 +446,6 @@ export default function Home(AOS) {
 					C418.826,262.499,414.877,269.052,409.08,275.572z"/>
                     </svg>
                     <span>Ceremonia 14:00 hrs</span>
-                    {/* <svg viewBox="0 0 512 512">
-                      <path d="M408.6-1H101.4C86.893-1,75.8,10.093,75.8,24.6v460.8c0,14.507,11.093,25.6,25.6,25.6h307.2
-				c14.507,0,25.6-11.093,25.6-25.6V24.6C434.2,10.093,423.107-1,408.6-1z M417.133,485.4c0,5.12-3.413,8.533-8.533,8.533H101.4
-				c-5.12,0-8.533-3.413-8.533-8.533V24.6c0-5.12,3.413-8.533,8.533-8.533h307.2c5.12,0,8.533,3.413,8.533,8.533V485.4z"/>
-                      <path className='resaltar' d="M220.013,158.573l5.973,6.827l5.973-6.827c3.413-3.413,6.827-6.827,10.24-10.24c2.18-2.18,4.376-4.36,6.556-6.562
-				c7.997,10.011,16.855,18.879,24.164,26.189c2.56,2.56,5.12,5.12,6.827,6.827l5.973,6.827l5.973-7.68
-				c3.413-3.413,6.827-6.827,10.24-10.24c15.36-15.36,31.573-30.72,36.693-53.76c3.413-14.507-0.853-29.013-11.093-36.693
-				c-9.387-7.68-23.04-7.68-35.84-1.707c-2.56,0.853-5.12,2.56-5.973,2.56s-3.413-1.707-5.973-2.56
-				c-0.858-0.286-1.616-0.572-2.347-0.858c-2.067-5.129-5.299-9.57-9.6-12.796c-9.387-7.68-23.04-7.68-35.84-1.707
-				c-2.56,0.853-5.12,2.56-5.973,2.56c-0.853,0-4.267-1.707-6.827-2.56c-13.653-6.827-27.307-5.973-37.547,2.56
-				c-7.68,6.827-11.947,14.507-11.947,23.893c-0.853,24.747,25.6,51.2,43.52,69.12C215.747,154.307,218.307,156.867,220.013,158.573
-				z M299.373,87.747c6.827-3.413,13.653-3.413,17.92,0c5.12,4.267,6.827,11.947,5.12,19.627
-				c-4.267,17.92-17.92,30.72-32.427,45.227c-1.707,1.707-2.56,2.56-4.267,4.267l-0.853-0.853
-				c-6.723-7.563-16.75-16.783-24.389-26.841c8.389-9.892,15.368-20.885,18.415-34.599c0.251-1.067,0.448-2.133,0.616-3.197
-				C285.981,93.653,290.275,92.709,299.373,87.747z M186.733,82.627c0-4.267,1.707-7.68,5.973-11.093
-				c1.707-1.707,4.267-3.413,8.533-3.413c2.56,0,5.973,0.853,11.093,2.56c11.947,5.973,14.507,5.973,27.307,0
-				c6.827-3.413,12.8-3.413,17.92,0c1.422,1.185,2.571,2.641,3.466,4.279l0.8,3.401c0.853,3.413,0.853,7.68,0,11.093
-				c-2.56,13.653-11.947,24.747-18.773,32.427l-4.122,4.946c-2.811,2.87-5.724,5.753-8.678,8.707
-				c-1.707,1.707-2.56,2.56-4.267,4.267l-0.853-0.853C211.48,126.147,185.88,100.547,186.733,82.627z"/>
-                      <path d="M383,220.867h-59.733c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533H383c5.12,0,8.533-3.413,8.533-8.533
-				S388.12,220.867,383,220.867z"/>
-                      <path d="M169.667,237.933h119.467c5.12,0,8.533-3.413,8.533-8.533s-3.413-8.533-8.533-8.533H169.667
-				c-5.12,0-8.533,3.413-8.533,8.533S164.547,237.933,169.667,237.933z"/>
-                      <path d="M127,237.933h8.533c5.12,0,8.533-3.413,8.533-8.533s-3.413-8.533-8.533-8.533H127c-5.12,0-8.533,3.413-8.533,8.533
-				S121.88,237.933,127,237.933z"/>
-                      <path d="M127,306.2h110.933c5.12,0,8.533-3.413,8.533-8.533s-3.413-8.533-8.533-8.533H127c-5.12,0-8.533,3.413-8.533,8.533
-				S121.88,306.2,127,306.2z"/>
-                      <path d="M383,289.133H272.067c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533H383c5.12,0,8.533-3.413,8.533-8.533
-				S388.12,289.133,383,289.133z"/>
-                      <path d="M127,374.467h76.8c5.12,0,8.533-3.413,8.533-8.533s-3.413-8.533-8.533-8.533H127c-5.12,0-8.533,3.413-8.533,8.533
-				S121.88,374.467,127,374.467z"/>
-                      <path d="M237.933,357.4c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533H255c5.12,0,8.533-3.413,8.533-8.533
-				S260.12,357.4,255,357.4H237.933z"/>
-                      <path d="M383,357.4h-93.867c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533H383c5.12,0,8.533-3.413,8.533-8.533
-				S388.12,357.4,383,357.4z"/>
-                      <path d="M383,425.667h-59.733c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533H383c5.12,0,8.533-3.413,8.533-8.533
-				S388.12,425.667,383,425.667z"/>
-                      <path d="M289.133,425.667H169.667c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533h119.467
-				c5.12,0,8.533-3.413,8.533-8.533S294.253,425.667,289.133,425.667z"/>
-                      <path d="M135.533,425.667H127c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533h8.533c5.12,0,8.533-3.413,8.533-8.533
-				S140.653,425.667,135.533,425.667z"/>
-                    </svg> */}
                   </p>
                   <p>
                     <svg
@@ -502,14 +467,43 @@ export default function Home(AOS) {
                 </div>
 
               </section>
-              <section className='confirmacion'>
+
+              {/* <section className='confirmacion'>
                 <form action="">
                   <p>Favor de confirmar asistencia antes del 1 de Diciembre</p>
                   <button onClick={(e) => handleSubmit(e)}>Confirmar Asistencia</button>
                 </form>
-                {/* <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Boda+Diana+y+Cano&dates=20221224T150000/20221224T190000&details=Hora+de+servicio+de+comida+3:30pm+a+6:00pm.&location=Priv.+de+Chabacano+LB,+Juan+N.+Alvarez,+40020+Iguala+de+la+Independencia,+Gro." target="_blank">
-                  google
-                </a> */}
+              </section> */}
+              <section className='momentos'>
+                <h2>Momentos</h2>
+                <div onClick={() => { setOpen(true); setFotoElegida(1)}} className='momentosF f01'>
+                </div>
+                <div onClick={() => { setOpen(true); setFotoElegida(2)}}  className='momentosF f02'>
+                </div>
+                <div onClick={() => { setOpen(true); setFotoElegida(3)}}  className='momentosF f03'>
+                </div>
+                <div onClick={() => { setOpen(true); setFotoElegida(4)}}  className='momentosF f04'>
+                </div>
+                <div onClick={() => { setOpen(true); setFotoElegida(5)}}  className='momentosF f05'>
+                </div>
+                <div onClick={() => { setOpen(true); setFotoElegida(6)}}  className='momentosF f06'>
+                </div>
+                {open ? (
+                  <div className='bloqueo'>
+                    <div className='closed' onClick={() => { setOpen(false)}}></div>
+                    <div className='foto'>
+                      <Image src={fotoElegida === 1 ? (f01) : fotoElegida === 2 ? (f02) : fotoElegida === 3 ? (f03) : fotoElegida === 4 ? (f04) : fotoElegida === 5 ? (f05) : (f06)} />
+                    </div>
+                    <div className='controles'>
+                      <svg onClick={() => {setFotoElegida(fotoElegida === 1 ? 6 : fotoElegida - 1)}} xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                      </svg>
+                      <svg onClick={() => {setFotoElegida(fotoElegida === 6 ? 1 : fotoElegida + 1)}} xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                      </svg>
+                    </div>
+                  </div>
+                ) : null}
               </section>
             </main>
           </>) : (

@@ -8,6 +8,12 @@ $fotoFondo: url('../public/parejaBosque.jpg');
 $fotoFondoMediano: url('../public/parejaBosqueMedianoMin-compressed.jpg');
 $fotoFondoMini: url('../public/parejaBosqueMin.jpg');
 $white: #ffffff;
+$f01: url('../public/001.jpg');
+$f02: url('../public/013.jpg');
+$f03: url('../public/009.jpg');
+$f04: url('../public/006.jpg');
+$f05: url('../public/010.jpeg');
+$f06: url('../public/004.jpeg');
 
 #id {
   width: 100vw;
@@ -29,7 +35,7 @@ $white: #ffffff;
   background-image: url(../public/textura.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 1400px;
+  background-size: cover;
 }
 
 .clearfix::after {
@@ -293,7 +299,7 @@ $white: #ffffff;
     transition: .3s;
     border-radius: 100% 0 0 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 500;
   }
 
   .dia {
@@ -720,5 +726,98 @@ section.confirmacion {
     background-color: transparent;
     color: #ffffff;
     border: solid 1px #ffffff;
+  }
+}
+section.momentos{
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  h2{
+    text-align: center;
+    width: 100%;
+    margin: .5rem 0 0 0;
+  }
+  .momentosF{
+    display: flex;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 0.5rem);
+    height: 200px;
+    background-color: #2683ae5c;
+    &.f01{
+      background-image: $f01;
+      background-size: cover;
+      background-position: center;
+    }
+    &.f02{
+      background-image: $f02;
+      background-size: cover;
+      background-position: center;
+    }
+    &.f03{
+      background-image: $f03;
+      background-size: cover;
+      background-position: center;
+    }
+    &.f04{
+      background-image: $f04;
+      background-size: cover;
+      background-position: center;
+    }
+    &.f05{
+      background-image: $f05;
+      background-size: cover;
+      background-position: center;
+    }
+    &.f06{
+      background-image: $f06;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  .bloqueo{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    left: 0;
+    z-index: 501;
+    background-color: rgba(26, 16, 88, 0.377);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    flex-direction: column;
+    .closed{
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+    }
+    .foto{
+      border-radius: 1rem;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      span{
+        padding: 0!important;
+        margin: 0!important;
+      }
+    }
+    .controles{
+      width: 100%;
+      height: 5rem;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
   }
 }
