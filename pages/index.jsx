@@ -365,7 +365,6 @@ export default function Home(AOS) {
                     </div>
                     <br />
                     <p>¡Los esperamos!</p>
-                    <p>Presentar invitación digital <br /> para acceso al evento</p>
                   </>
                 ) : null}
               </section>
@@ -445,7 +444,7 @@ export default function Home(AOS) {
 					c-0.504,1.6-0.314,3.338,0.523,4.791c0.838,1.455,2.244,2.492,3.881,2.861l77.406,17.432
 					C418.826,262.499,414.877,269.052,409.08,275.572z"/>
                     </svg>
-                    <span>Ceremonia 14:00 hrs</span>
+                    <span>Ceremonia Civil 14:40 hrs</span>
                   </p>
                   <p>
                     <svg
@@ -460,7 +459,7 @@ export default function Home(AOS) {
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#252834" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                       <path className='resaltar' d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                     </svg> <span>
-                      Priv. de Chabacano LB, Juan N. Alvarez, 40020 Iguala de la Independencia, Gro.
+                      Priv. de Chabacano #22, Juan N. Alvarez, 40020 Iguala de la Independencia, Gro.
                     </span>
                   </p>
                   <a target={'_blank'} rel="noreferrer" href="https://goo.gl/maps/XgrxcnsebgsXVmAS9">Ver mapa</a>
