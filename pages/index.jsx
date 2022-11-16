@@ -324,6 +324,23 @@ export default function Home(AOS) {
                   <Image src={rosaCentral}
                     layout="responsive" />
                 </div>
+                <div className='animacionFlecha'>
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                    </svg>
+                  </div>
+                </div>
                 {/* <img src={rosaCentral} alt="" /> */}
               </div>
               {/* <DateCountdown className={''} dateTo='2022-12-24' locales={['año','mes','dia','hora','minuto','segundo']} locales_plural={['años','meses','dias','horas','minutos','segundos']}/> */}
@@ -475,29 +492,29 @@ export default function Home(AOS) {
               </section> */}
               <section className='momentos'>
                 <h2>Momentos</h2>
-                <div onClick={() => { setOpen(true); setFotoElegida(1)}} className='momentosF f01'>
+                <div onClick={() => { setOpen(true); setFotoElegida(1) }} className='momentosF f01'>
                 </div>
-                <div onClick={() => { setOpen(true); setFotoElegida(2)}}  className='momentosF f02'>
+                <div onClick={() => { setOpen(true); setFotoElegida(2) }} className='momentosF f02'>
                 </div>
-                <div onClick={() => { setOpen(true); setFotoElegida(3)}}  className='momentosF f03'>
+                <div onClick={() => { setOpen(true); setFotoElegida(3) }} className='momentosF f03'>
                 </div>
-                <div onClick={() => { setOpen(true); setFotoElegida(4)}}  className='momentosF f04'>
+                <div onClick={() => { setOpen(true); setFotoElegida(4) }} className='momentosF f04'>
                 </div>
-                <div onClick={() => { setOpen(true); setFotoElegida(5)}}  className='momentosF f05'>
+                <div onClick={() => { setOpen(true); setFotoElegida(5) }} className='momentosF f05'>
                 </div>
-                <div onClick={() => { setOpen(true); setFotoElegida(6)}}  className='momentosF f06'>
+                <div onClick={() => { setOpen(true); setFotoElegida(6) }} className='momentosF f06'>
                 </div>
                 {open ? (
                   <div className='bloqueo'>
-                    <div className='closed' onClick={() => { setOpen(false)}}></div>
+                    <div className='closed' onClick={() => { setOpen(false) }}></div>
                     <div className='foto'>
                       <Image src={fotoElegida === 1 ? (f01) : fotoElegida === 2 ? (f02) : fotoElegida === 3 ? (f03) : fotoElegida === 4 ? (f04) : fotoElegida === 5 ? (f05) : (f06)} />
                     </div>
                     <div className='controles'>
-                      <svg onClick={() => {setFotoElegida(fotoElegida === 1 ? 6 : fotoElegida - 1)}} xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                      <svg onClick={() => { setFotoElegida(fotoElegida === 1 ? 6 : fotoElegida - 1) }} xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
                       </svg>
-                      <svg onClick={() => {setFotoElegida(fotoElegida === 6 ? 1 : fotoElegida + 1)}} xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                      <svg onClick={() => { setFotoElegida(fotoElegida === 6 ? 1 : fotoElegida + 1) }} xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
                       </svg>
                     </div>

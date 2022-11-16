@@ -318,6 +318,55 @@ $f06: url('../public/004.jpeg');
       margin-top: 2rem;
       height: 10rem;
     }
+
+    @keyframes aparecer {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    @keyframes desaparecer {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    
+    .animacionFlecha {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation-name: desaparecer;
+      animation-duration: 10s;
+      animation-delay: 0s;
+      div{
+        text-align: center;
+        width: 4rem;
+        height: 10px;
+        animation-name: aparecer;
+        animation-duration: 1s;
+        opacity: 0;
+        &:nth-child(3){
+          animation-delay: 0s;
+        }
+        &:nth-child(2){
+          animation-delay: .5s;
+        }
+        &:nth-child(1){
+          animation-delay: 1s;
+        }
+        svg{
+          text-align: center;
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 }
 
@@ -633,7 +682,8 @@ section.faltan {
       path {
         fill: $azulRey;
       }
-      .resaltar{
+
+      .resaltar {
         fill: $rojo;
       }
     }
@@ -728,17 +778,20 @@ section.confirmacion {
     border: solid 1px #ffffff;
   }
 }
-section.momentos{
+
+section.momentos {
   display: flex;
   padding: 1rem;
   flex-wrap: wrap;
   gap: 1rem;
-  h2{
+
+  h2 {
     text-align: center;
     width: 100%;
     margin: .5rem 0 0 0;
   }
-  .momentosF{
+
+  .momentosF {
     display: flex;
     border-radius: 1rem;
     align-items: center;
@@ -746,38 +799,45 @@ section.momentos{
     width: calc(50% - 0.5rem);
     height: 200px;
     background-color: #2683ae5c;
-    &.f01{
+
+    &.f01 {
       background-image: $f01;
       background-size: cover;
       background-position: center;
     }
-    &.f02{
+
+    &.f02 {
       background-image: $f02;
       background-size: cover;
       background-position: center;
     }
-    &.f03{
+
+    &.f03 {
       background-image: $f03;
       background-size: cover;
       background-position: center;
     }
-    &.f04{
+
+    &.f04 {
       background-image: $f04;
       background-size: cover;
       background-position: center;
     }
-    &.f05{
+
+    &.f05 {
       background-image: $f05;
       background-size: cover;
       background-position: center;
     }
-    &.f06{
+
+    &.f06 {
       background-image: $f06;
       background-size: cover;
       background-position: center;
     }
   }
-  .bloqueo{
+
+  .bloqueo {
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -791,12 +851,14 @@ section.momentos{
     justify-content: center;
     padding: 1rem;
     flex-direction: column;
-    .closed{
+
+    .closed {
       width: 100vw;
       height: 100vh;
       position: absolute;
     }
-    .foto{
+
+    .foto {
       border-radius: 1rem;
       overflow: hidden;
       padding: 0;
@@ -805,12 +867,14 @@ section.momentos{
       align-items: center;
       justify-content: center;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      span{
-        padding: 0!important;
-        margin: 0!important;
+
+      span {
+        padding: 0 !important;
+        margin: 0 !important;
       }
     }
-    .controles{
+
+    .controles {
       width: 100%;
       height: 5rem;
       position: absolute;
