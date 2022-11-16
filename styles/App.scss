@@ -304,6 +304,7 @@ $f06: url('../public/004.jpeg');
 
   .dia {
     width: 100%;
+    min-height: 205px;
     position: absolute;
     bottom: 0;
 
@@ -343,15 +344,18 @@ $f06: url('../public/004.jpeg');
       align-items: center;
       justify-content: center;
       animation-name: desaparecer;
-      animation-duration: 10s;
+      animation-duration: 6s;
       animation-delay: 0s;
+      opacity: 1;
+      width: 100%;
+      position: absolute;
+      bottom: 1.5rem;
       div{
         text-align: center;
         width: 4rem;
         height: 10px;
         animation-name: aparecer;
         animation-duration: 1s;
-        opacity: 0;
         &:nth-child(3){
           animation-delay: 0s;
         }
