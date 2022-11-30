@@ -250,6 +250,8 @@ export default function Home(AOS) {
     novio: false
   },]
 
+  const fechaActal = new Date();
+
   useEffect(() => {
 
     setDateCountdown(dynamic(() => import('react-date-countdown-timer'), {}))
@@ -386,16 +388,35 @@ export default function Home(AOS) {
                 ) : null}
               </section>
               <section className='faltan'>
-                <p>Dias faltantes</p>
-                <div className="fecha">
-                  <DateCountdown numberOfFigures='6' dateTo='December 24, 2022 15:00:00 GMT -5' locales={['', '', '', '', '', '']} locales_plural={['', '', '', '', '', '']} />
-                  <div className='fechaTxt'>
-                    <span>Meses</span>
-                    <span>Dias</span>
-                    <span>Hrs</span>
-                    <span>Min.</span>
-                    <span>Seg.</span>
-                  </div>
+                {'23/12/2022' === fechaActal.toLocaleDateString() ?
+                  <>
+                    <p>Te esperamos <span className='mañana'>mañana</span></p>
+                  </>
+                  :
+                  '24/12/2022' === fechaActal.toLocaleDateString() ? 
+                  <>
+                  <p>Es hoy<span className='mañana'>,</span> es hoy<span className='mañana'>,</span> es hoy  <span className='mañana'>!!</span></p>
+                  </>
+                  :
+                    <>
+                      <p>Dias faltantes</p>
+                      <div className="fecha">
+                        <DateCountdown numberOfFigures='4' dateTo='December 24, 2022 15:00:00 GMT -5' locales={['', '', '', '', '', '']} locales_plural={['', '', '', '', '', '']} />
+                        <div className='fechaTxt'>
+                          <span>Dias</span>
+                          <span>Hrs</span>
+                          <span>Min.</span>
+                          <span>Seg.</span>
+                        </div>
+                      </div>
+                    </>
+                }
+                <div className='novios'>
+                  <div className='novia'></div>
+                  <div className='corazon'><svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                  </svg></div>
+                  <div className='novio'></div>
                 </div>
               </section>
               <section data-aos="fade-right" className='lugar'>
