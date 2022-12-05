@@ -129,7 +129,7 @@ export default function Home(AOS) {
     novio: true
   }, {
     familia: 'Horacio y familia',
-    invitados: '5',
+    invitados: '4',
     codigo: '135hor',
     tipo: '',
     novio: true
