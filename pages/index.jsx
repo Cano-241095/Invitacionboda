@@ -506,19 +506,17 @@ export default function Home(AOS) {
                   <br />
                 </div>
               </section>
-              <section data-aos="fade-up" data-aos-anchor-placement="center-bottom" className='invitados'>
-                {invitado.invitados !== '' ? (
-                  <>
-                    <p>Pase para <span>{invitado.invitados}</span> personas</p>
-                    <div className='adorno'>
-                      <Image src={adornoVerdeArriba}
-                        layout="responsive" />
-                    </div>
-                    <br />
-                    <p>¡Los esperamos!</p>
-                  </>
-                ) : null}
-              </section>
+              {invitado.invitados !== '' ? (
+                <section data-aos="fade-up" data-aos-anchor-placement="center-bottom" className='invitados'>
+                  <p>Pase para <span>{invitado.invitados}</span> personas</p>
+                  <div className='adorno'>
+                    <Image src={adornoVerdeArriba}
+                      layout="responsive" />
+                  </div>
+                  <br />
+                  <p>¡Los esperamos!</p>
+                </section>
+              ) : null}
               <section className='faltan'>
                 {'23/12/2022' === fechaActal.toLocaleDateString() ?
                   <>
