@@ -68,7 +68,7 @@ export default function Home(AOS) {
     tipo: 'familia',
     novio: true
   }, {
-    familia: 'Bahena Hernandez',
+    familia: 'Bahena',
     invitados: '3',
     codigo: '033bahher',
     tipo: 'familia',
@@ -122,7 +122,7 @@ export default function Home(AOS) {
     tipo: 'tio',
     novio: true
   }, {
-    familia: 'Cano Tamallo',
+    familia: 'Cano Tamayo',
     invitados: '2',
     codigo: '122cantam',
     tipo: 'familia',
