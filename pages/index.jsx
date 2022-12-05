@@ -81,7 +81,7 @@ export default function Home(AOS) {
     novio: true
   }, {
     familia: 'Tencha',
-    invitados: '3',
+    invitados: '2',
     codigo: '053abuten',
     tipo: 'Abuelita ',
     novio: true
@@ -142,14 +142,14 @@ export default function Home(AOS) {
     novio: true
   }, {
     familia: 'Gongora Reyes',
-    invitados: '5',
+    invitados: '4',
     codigo: '155gonrey',
     tipo: 'familia',
     novio: false
   }, {
     familia: 'Hernandez Reyes',
-    invitados: '6',
-    codigo: '166herrey',
+    invitados: '2',
+    codigo: '162herrey',
     tipo: 'familia',
     novio: false
   }, {
@@ -177,19 +177,19 @@ export default function Home(AOS) {
     tipo: '',
     novio: false
   }, {
-    familia: 'Rosa y Cruz',
+    familia: 'Gomez Corea',
     invitados: '4',
-    codigo: '214roscru',
-    tipo: '',
+    codigo: '214gomcor',
+    tipo: 'familia',
     novio: false
   }, {
-    familia: 'Maria Elena y familia',
+    familia: 'Ambriz Hernandez',
     invitados: '3',
-    codigo: '223marele',
+    codigo: '223ambher',
     tipo: '',
     novio: false
   }, {
-    familia: 'Ing. Jesus David',
+    familia: 'Ing. David Pilo y Sra.',
     invitados: '2',
     codigo: '232jespil',
     tipo: '',
@@ -231,11 +231,11 @@ export default function Home(AOS) {
     tipo: '',
     novio: false
   }, {
-    familia: 'Juan Alvarado',
+    familia: 'Alvarado',
     invitados: '4',
     codigo: '304juaalv',
-    tipo: '',
-    novio: false
+    tipo: 'familia',
+    novio: true
   }, {
     familia: 'Dulce Rodriguez',
     invitados: '2',
@@ -248,7 +248,139 @@ export default function Home(AOS) {
     codigo: '322dalreb',
     tipo: '',
     novio: false
-  },]
+  }, {
+    familia: 'Xime',
+    invitados: '2',
+    codigo: '332ximeg',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Miguel Robles',
+    invitados: '3',
+    codigo: '343miguelr',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Carolina Perez',
+    invitados: '2',
+    codigo: '352carog',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Andrea',
+    invitados: '2',
+    codigo: '362andreag',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Ing. Jose Alberto',
+    invitados: '2',
+    codigo: '372josalb',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Ing. Leonardo Flores',
+    invitados: '2',
+    codigo: '382leoflo',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Ing. Carmelo Villa',
+    invitados: '2',
+    codigo: '392carvil',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Dani',
+    invitados: '2',
+    codigo: '402dant',
+    tipo: 'Tio',
+    novio: true
+  }, {
+    familia: 'Israel Cano',
+    invitados: '2',
+    codigo: '412isrcan',
+    tipo: '',
+    novio: true
+  }, {
+    familia: 'Ing. Aris Alcocer',
+    invitados: '2',
+    codigo: '422ariacl',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Daniela Villarruel',
+    invitados: '2',
+    codigo: '432danvil',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Fabian Salazar',
+    invitados: '4',
+    codigo: '444fabsal',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Fernando Alatorre',
+    invitados: '2',
+    codigo: '452ferala',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Apolos Garcia',
+    invitados: '2',
+    codigo: '462apolgar',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Rossana',
+    invitados: '2',
+    codigo: '472rosme',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Waldo',
+    invitados: '2',
+    codigo: '482walme',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Oscar',
+    invitados: '2',
+    codigo: '492oscme',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Arturo',
+    invitados: '2',
+    codigo: '502artme',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Hernandez Cabrera',
+    invitados: '3',
+    codigo: '513hercab',
+    tipo: 'Familia',
+    novio: false
+  }, {
+    familia: 'Hernandez Jimenez',
+    invitados: '2',
+    codigo: '522hercab',
+    tipo: 'Familia',
+    novio: false
+  }, {
+    familia: 'Martinez Hernandez',
+    invitados: '3',
+    codigo: '533marher',
+    tipo: 'Familia',
+    novio: false
+  }, {
+    familia: 'Benitez Martinez',
+    invitados: '4',
+    codigo: '544benmar',
+    tipo: 'Familia',
+    novio: false
+  }]
 
   const fechaActal = new Date();
 
@@ -363,7 +495,7 @@ export default function Home(AOS) {
                     layout="responsive" />
                 </div>
                 <br />
-                <p>En compañia de nuestros padres</p>
+                <p>En compañía de nuestros padres</p>
                 <div className="padres">
                   <br />
                   <p className='mama'><span>J</span>ulia Reyes Morales</p>
@@ -393,13 +525,13 @@ export default function Home(AOS) {
                     <p>Te esperamos <span className='mañana'>mañana</span></p>
                   </>
                   :
-                  '24/12/2022' === fechaActal.toLocaleDateString() ? 
-                  <>
-                  <p>Es hoy<span className='mañana'>,</span> es hoy<span className='mañana'>,</span> es hoy  <span className='mañana'>!!</span></p>
-                  </>
-                  :
+                  '24/12/2022' === fechaActal.toLocaleDateString() ?
                     <>
-                      <p>Dias faltantes</p>
+                      <p>Es hoy<span className='mañana'>,</span> es hoy<span className='mañana'>,</span> es hoy  <span className='mañana'>!!</span></p>
+                    </>
+                    :
+                    <>
+                      <p>Días faltantes</p>
                       <div className="fecha">
                         <DateCountdown numberOfFigures='4' dateTo='December 24, 2022 15:00:00 GMT -5' locales={['', '', '', '', '', '']} locales_plural={['', '', '', '', '', '']} />
                         <div className='fechaTxt'>
@@ -420,7 +552,7 @@ export default function Home(AOS) {
                 </div>
               </section>
               <section data-aos="fade-right" className='lugar'>
-                <p><Image src={rosaL} width={40} height={35} /> ¿Donde y Cuando?<Image src={rosaR} width={40} height={35} /></p>
+                <p><Image src={rosaL} width={40} height={35} /> ¿Dónde y Cuando?<Image src={rosaR} width={40} height={35} /></p>
 
                 <div data-aos="fade-left" className="civil">
                   <h2>Celebración</h2>
@@ -492,6 +624,15 @@ export default function Home(AOS) {
                     </svg>
                     <span>Comida 15:30 - 18:00 hrs</span>
 
+                  </p>
+                  <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
+                      <path className='resaltar' d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.309 8 6.982Z" />
+                      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                    </svg>
+                    <span>
+                      Salón Babilonia (anteriormente llamado quinta el Edén)
+                    </span>
                   </p>
                   <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#252834" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">
