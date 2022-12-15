@@ -380,6 +380,24 @@ export default function Home(AOS) {
     codigo: '544benmar',
     tipo: 'Familia',
     novio: false
+  }, {
+    familia: 'Brenda Carina',
+    invitados: '2',
+    codigo: '552brecar',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Ruby Mayren',
+    invitados: '2',
+    codigo: '562rubmay',
+    tipo: '',
+    novio: false
+  }, {
+    familia: 'Benitez Martinez',
+    invitados: '4',
+    codigo: '544benmar',
+    tipo: 'Familia',
+    novio: false
   }]
 
   const fechaActal = new Date();
